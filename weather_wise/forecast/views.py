@@ -14,3 +14,14 @@ def forecast(request):
 
     return HttpResponse(template.render(context, request))
 
+def send_weather_details_to_user(data):
+
+    print(data.Post)
+
+    message = "Sorry, city not found"
+
+    return JsonResponse({
+        "message": message,
+        "status_code": 200
+    })
+
